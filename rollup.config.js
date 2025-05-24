@@ -10,7 +10,7 @@ import terser from '@rollup/plugin-terser'
 import nodePolyfills from 'rollup-plugin-polyfill-node'
 import typescript from '@rollup/plugin-typescript'
 import sourcemaps from 'rollup-plugin-sourcemaps'
-import pkg from './package.json' assert { type: 'json' }
+import pkg from './package.json' with { type: 'json' }
 
 export default {
   input: 'src/index.tsx',
