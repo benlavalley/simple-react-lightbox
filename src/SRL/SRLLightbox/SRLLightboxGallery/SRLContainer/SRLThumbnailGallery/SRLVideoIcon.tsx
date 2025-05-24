@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import { ISRLVideoIcon } from '../../../../../types'
 import { SRLVideoIconStyle } from '../../../../styles/SRLThumbnailsStyle'
 
@@ -20,8 +18,4 @@ export default function SRLVideoIcon({ thumbnailsIconColor }: ISRLVideoIcon) {
       />
     </SRLVideoIconStyle>
   )
-}
-
-SRLVideoIcon.propTypes = {
-  thumbnailsIconColor: PropTypes.string
 }

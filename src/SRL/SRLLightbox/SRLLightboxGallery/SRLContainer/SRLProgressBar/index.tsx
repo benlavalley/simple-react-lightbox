@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 
 import { ISRLProgressBarComponent } from '../../../../../types'
 import { useInterval } from '../../../../SRLHooks'
@@ -50,15 +49,15 @@ const SRLProgressBarComponent = ({
   )
 }
 
-SRLProgressBarComponent.propTypes = {
-  autoplay: PropTypes.bool,
-  autoplaySpeed: PropTypes.number,
-  currentElementID: PropTypes.string,
-  progressBar: PropTypes.shape({
-    backgroundColor: PropTypes.string,
-    fillColor: PropTypes.string,
-    height: PropTypes.string
-  })
+SRLProgressBarComponent.defaultProps = {
+  autoplay: false,
+  autoplaySpeed: 3000,
+  currentElementID: '',
+  progressBar: {
+    backgroundColor: '#f2f2f2',
+    fillColor: '#000000',
+    height: '3px'
+  }
 }
 
 export default SRLProgressBarComponent

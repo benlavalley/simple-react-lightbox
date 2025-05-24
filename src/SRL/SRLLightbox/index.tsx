@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef } from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 import { AnimatePresence } from 'framer-motion'
-import PropTypes from 'prop-types'
 
 import { SRLCtx } from '../SRLContext'
 import Portal from '../SRLPortal'
@@ -78,10 +77,6 @@ function SRLLightbox() {
       </AnimatePresence>
     )
   }
-}
-
-SRLLightbox.propTypes = {
-  context: PropTypes.object
 }
 
 export default SRLLightbox

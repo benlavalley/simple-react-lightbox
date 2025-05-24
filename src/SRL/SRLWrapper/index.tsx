@@ -1,7 +1,6 @@
 import { useContext, useEffect, useRef } from 'react'
 // IsEqual from lodash to do a deep comparison of the objects
 import { isEmpty, isEqual } from 'lodash'
-import PropTypes from 'prop-types'
 
 import {
   IArrayImage,
@@ -398,87 +397,6 @@ const SRLWrapper = ({
 
 export default SRLWrapper
 
-SRLWrapper.propTypes = {
-  defaultOptions: PropTypes.shape({
-    settings: PropTypes.shape({
-      autoplaySpeed: PropTypes.number,
-      boxShadow: PropTypes.string,
-      removeScrollBar: PropTypes.bool,
-      disableKeyboardControls: PropTypes.bool,
-      disablePanzoom: PropTypes.bool,
-      disableWheelControls: PropTypes.bool,
-      downloadedFileName: PropTypes.string,
-      hideControlsAfter: PropTypes.number,
-      lightboxTransitionSpeed: PropTypes.number,
-      lightboxTransitionTimingFunction: PropTypes.string,
-      limitToBounds: PropTypes.bool,
-      overlayColor: PropTypes.string,
-      slideAnimationType: PropTypes.string,
-      slideSpringValues: PropTypes.array,
-      slideTransitionSpeed: PropTypes.number,
-      slideTransitionTimingFunction: PropTypes.string,
-      usingPreact: PropTypes.bool
-    }),
-    buttons: PropTypes.shape({
-      backgroundColor: PropTypes.string,
-      iconColor: PropTypes.string,
-      iconPadding: PropTypes.string,
-      showAutoplayButton: PropTypes.bool,
-      showCloseButton: PropTypes.bool,
-      showDownloadButton: PropTypes.bool,
-      showFullscreenButton: PropTypes.bool,
-      showNextButton: PropTypes.bool,
-      showPrevButton: PropTypes.bool,
-      showThumbnailsButton: PropTypes.bool,
-      size: PropTypes.string
-    }),
-    caption: PropTypes.shape({
-      captionColor: PropTypes.string,
-      captionAlignment: PropTypes.string,
-      captionFontFamily: PropTypes.string,
-      captionFontSize: PropTypes.string,
-      captionFontStyle: PropTypes.string,
-      captionFontWeight: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-      ]),
-      captionContainerPadding: PropTypes.string,
-      captionTextTransform: PropTypes.string,
-      showCaption: PropTypes.bool
-    }),
-    thumbnails: PropTypes.shape({
-      showThumbnails: PropTypes.bool,
-      thumbnailsAlignment: PropTypes.string,
-      thumbnailsContainerPadding: PropTypes.string,
-      thumbnailsContainerBackgroundColor: PropTypes.string,
-      thumbnailsGap: PropTypes.string,
-      thumbnailsIconColor: PropTypes.string,
-      thumbnailsOpacity: PropTypes.number,
-      thumbnailsPosition: PropTypes.string,
-      thumbnailsSize: PropTypes.array
-    }),
-    progressBar: PropTypes.shape({
-      backgroundColor: PropTypes.string,
-      fillColor: PropTypes.string,
-      height: PropTypes.string,
-      showProgressBar: PropTypes.bool
-    })
-  }),
-  defaultCallbacks: PropTypes.shape({
-    onCountSlides: PropTypes.func,
-    onLightboxClosed: PropTypes.func,
-    onLightboxOpened: PropTypes.func,
-    onSlideChange: PropTypes.func
-  }),
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]),
-  options: PropTypes.object,
-  callbacks: PropTypes.object,
-  elements: PropTypes.arrayOf(PropTypes.element)
-}
-
 export const defaultOptions = {
   settings: {
     autoplaySpeed: 3000,
@@ -551,5 +469,8 @@ export const defaultCallbacks = {
 
 SRLWrapper.defaultProps = {
   defaultOptions: defaultOptions,
-  defaultCallbacks: defaultCallbacks
+  defaultCallbacks: defaultCallbacks,
+  options: {},
+  callbacks: {},
+  elements: []
 }

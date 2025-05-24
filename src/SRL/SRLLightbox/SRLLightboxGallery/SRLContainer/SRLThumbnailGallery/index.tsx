@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 
 import { ISRLThumbnailGalleryComponent } from '../../../../../types'
 import {
@@ -213,20 +212,3 @@ const SRLThumbnailGalleryComponent = ({
 }
 
 export default SRLThumbnailGalleryComponent
-
-SRLThumbnailGalleryComponent.propTypes = {
-  elements: PropTypes.array,
-  handleCurrentElement: PropTypes.func,
-  currentId: PropTypes.string,
-  SRLThumbnailsRef: PropTypes.object,
-  thumbnails: PropTypes.shape({
-    thumbnailsAlignment: PropTypes.string,
-    thumbnailsContainerBackgroundColor: PropTypes.string,
-    thumbnailsContainerPadding: PropTypes.string,
-    thumbnailsGap: PropTypes.string,
-    thumbnailsIconColor: PropTypes.string,
-    thumbnailsOpacity: PropTypes.number,
-    thumbnailsPosition: PropTypes.string,
-    thumbnailsSize: PropTypes.array
-  })
-}

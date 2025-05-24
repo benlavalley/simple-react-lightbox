@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 
 import { ISRLLightboxControls } from '../../../../types'
 import { useSizes } from '../../../SRLHooks'
@@ -285,40 +284,3 @@ ISRLLightboxControls) => {
 }
 
 export default SRLLightboxControls
-
-SRLLightboxControls.propTypes = {
-  autoplay: PropTypes.bool,
-  buttons: PropTypes.shape({
-    backgroundColor: PropTypes.string,
-    iconColor: PropTypes.string,
-    iconPadding: PropTypes.string,
-    showAutoplayButton: PropTypes.bool,
-    showCloseButton: PropTypes.bool,
-    showDownloadButton: PropTypes.bool,
-    showFullscreenButton: PropTypes.bool,
-    showNextButton: PropTypes.bool,
-    showPrevButton: PropTypes.bool,
-    showThumbnailsButton: PropTypes.bool,
-    size: PropTypes.string
-  }),
-  hideThumbnails: PropTypes.bool,
-  buttonsOffsetFromProgressBar: PropTypes.string,
-  currentElementID: PropTypes.string,
-  handleCloseLightbox: PropTypes.func,
-  handleFullScreen: PropTypes.func,
-  handleImageDownload: PropTypes.func,
-  handleNextElement: PropTypes.func,
-  handlePanzoom: PropTypes.func,
-  handlePrevElement: PropTypes.func,
-  handleThumbnails: PropTypes.func,
-  panzoomEnabled: PropTypes.bool,
-  setAutoplay: PropTypes.func,
-  settings: PropTypes.shape({
-    autoplaySpeed: PropTypes.number
-  }),
-  showProgressBar: PropTypes.bool,
-  showThumbnails: PropTypes.bool,
-  thumbnailsPosition: PropTypes.string,
-  SRLThumbnailsRef: PropTypes.object,
-  thumbnailsSize: PropTypes.array
-}

@@ -2,7 +2,6 @@ import { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { useIdle } from 'react-use'
 // Lodash helper
 import { findIndex } from 'lodash'
-import PropTypes from 'prop-types'
 import subscribe from 'subscribe-event'
 import { useDebouncedCallback } from 'use-debounce'
 
@@ -552,41 +551,6 @@ const SRLLightboxGallery = ({
       />
     </div>
   )
-}
-
-SRLLightboxGallery.propTypes = {
-  callbacks: PropTypes.object,
-  elements: PropTypes.array,
-  isOpened: PropTypes.bool,
-  dispatch: PropTypes.func,
-  selectedElement: PropTypes.object,
-  options: PropTypes.shape({
-    thumbnails: PropTypes.shape({
-      thumbnailsContainerPadding: PropTypes.string,
-      thumbnailsPosition: PropTypes.string,
-      thumbnailsSize: PropTypes.array,
-      showThumbnails: PropTypes.bool
-    }),
-    settings: PropTypes.shape({
-      overlayColor: PropTypes.string,
-      autoplaySpeed: PropTypes.number,
-      disableKeyboardControls: PropTypes.bool,
-      disablePanzoom: PropTypes.bool,
-      limitToBounds: PropTypes.bool,
-      hideControlsAfter: PropTypes.number
-    }),
-    buttons: PropTypes.shape({
-      backgroundColor: PropTypes.string,
-      iconColor: PropTypes.string,
-      iconPadding: PropTypes.string,
-      size: PropTypes.string
-    }),
-    progressBar: PropTypes.shape({
-      showProgressBar: PropTypes.bool,
-      background: PropTypes.string,
-      height: PropTypes.string
-    })
-  })
 }
 
 export default SRLLightboxGallery

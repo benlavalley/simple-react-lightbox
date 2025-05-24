@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useSwipeable } from 'react-swipeable'
 import { AnimatePresence } from 'framer-motion'
-import PropTypes from 'prop-types'
 import subscribe from 'subscribe-event'
 import { useDebouncedCallback } from 'use-debounce'
 
@@ -255,57 +254,5 @@ function SRLContainerComponent({
   )
 }
 
-SRLContainerComponent.propTypes = {
-  caption: PropTypes.string,
-  direction: PropTypes.string,
-  elements: PropTypes.array,
-  handleCloseLightbox: PropTypes.func,
-  handleCurrentElement: PropTypes.func,
-  handleNextElement: PropTypes.func,
-  handlePanzoom: PropTypes.func,
-  handlePrevElement: PropTypes.func,
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  hideThumbnails: PropTypes.bool,
-  id: PropTypes.string,
-  options: PropTypes.shape({
-    settings: PropTypes.shape({
-      boxShadow: PropTypes.string,
-      disablePanzoom: PropTypes.bool,
-      disableWheelControls: PropTypes.bool,
-      limitToBounds: PropTypes.bool,
-      slideAnimationType: PropTypes.string,
-      slideSpringValues: PropTypes.array,
-      slideTransitionSpeed: PropTypes.number,
-      slideTransitionTimingFunction: PropTypes.string
-    }),
-    caption: PropTypes.shape({
-      captionAlignment: PropTypes.string,
-      captionColor: PropTypes.string,
-      captionFontFamily: PropTypes.string,
-      captionFontSize: PropTypes.string,
-      captionFontStyle: PropTypes.string,
-      captionFontWeight: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-      ]),
-      captionContainerPadding: PropTypes.string,
-      captionTextTransform: PropTypes.string,
-      showCaption: PropTypes.bool
-    }),
-    thumbnails: PropTypes.shape({
-      showThumbnails: PropTypes.bool,
-      thumbnailsOpacity: PropTypes.number,
-      thumbnailsPosition: PropTypes.string,
-      thumbnailsSize: PropTypes.array
-    })
-  }),
-  panzoomEnabled: PropTypes.bool,
-  showControls: PropTypes.bool,
-  source: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  SRLCaptionRef: PropTypes.object,
-  SRLThumbnailsRef: PropTypes.object,
-  thumbnailsOpacity: PropTypes.number,
-  type: PropTypes.string,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-}
+
 export default SRLContainerComponent

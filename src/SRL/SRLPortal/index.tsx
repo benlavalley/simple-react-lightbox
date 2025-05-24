@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 
 import { SRLCtx } from '../SRLContext'
 import { SRLLightbox } from '../styles/SRLLightBoxstyles'
@@ -45,13 +44,10 @@ const Portal = ({ isOpened, children, className }: IPortal) => {
   return ReactDOM.createPortal(modalMarkup, document.body)
 }
 
-export default Portal
-
-Portal.propTypes = {
-  selector: PropTypes.string,
-  isOpened: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
+Portal.defaultProps = {
+  selector: undefined,
+  isOpened: false,
+  className: undefined
 }
+
+export default Portal

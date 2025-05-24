@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react'
-import PropTypes from 'prop-types'
 
 import { IElement, IReducerAction, IState } from '../../types'
 
@@ -167,10 +166,3 @@ const SRLContextComponent: React.FC<TSRLContextComponent> = (props) => {
 
 export { SRLCtx }
 export default SRLContextComponent
-
-SRLContextComponent.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
-}
